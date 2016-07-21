@@ -10,3 +10,7 @@ planets might give a similar transit depth. Describe why small stars (M dwarfs) 
 host stars. Now create light curves for spectral resolutions (R∼ λ/∆λ) of roughly 10 and 100.
 Investigate how the transit shape/depth changes as a function of wavelength. At what wavelengths
 is the limb-darkening effect the strongest?
+
+
+Presentation
+https://docs.google.com/a/spacegeneration.org/presentation/d/1ZAui1lmrSWQuvumcG8J3URGdvueabxowuMqT870PuHM/edit?usp=sharing
