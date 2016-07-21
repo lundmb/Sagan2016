@@ -1,6 +1,6 @@
 # Sagan2016
 
-1.2 Spectroscopic Light Curves
+1.2 Spectroscopic Light Curves  
 It is important to understand how shape of a transit will change with wavelength. Using the 1D
 stellar spectra as a function of time, derive a white-light (summed over all wavelength) light curve
 (as a function of time). By measurement (or by eye) estimate the depth of the transit. Given that
