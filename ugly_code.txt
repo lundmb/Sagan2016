@@ -1,0 +1,42 @@
+bin_num = 100
+bin_size = 2048/bin_num
+depth = []
+wavelength = []
+maxima = []
+minima = []
+for j in range(0,bin_num):
+    #print j*bin_size, (j+1)*bin_size, j
+    trimmed_light = []
+    trimmed_wavelength = []
+    cur_min = 1e6
+    cur_max = 0
+    #print j, cur_max, cur_min
+    for i in range(1,145):
+        spec1 = hdulist1D[i]    
+        trimmed_light.append((sum(spec1.data.field(1)
+            [(j)*bin_size:(j+1)*bin_size])))
+        if (trimmed_light[i-1] > cur_max):
+            cur_max = trimmed_light[i-1]
+        if (trimmed_light[i-1] < cur_min):
+            cur_min = trimmed_light[i-1]
+    print j, cur_max, cur_min, cur_min/cur_max
+    #plt.plot(trimmed_light[j])
+    #plt.show()
+    trimmed_wavelength.append((spec1.data.field(0)[(j+0.5)*bin_size]))
+    wavelength.append(trimmed_wavelength)
+    depth.append((cur_max-cur_min)/cur_max)
+    pylab.plot(trimmed_light, label = ("$\lambda$ "+str((trimmed_wavelength[0]))))
+    maxima.append(cur_max)
+    minima.append(cur_min)
+pylab.title(str(j+1)+" bin light curves")
+pylab.xlabel("time")
+pylab.ylabel("Flux")
+#pylab.legend()
+pylab.show()
+pylab.plot(wavelength, depth)
+pylab.plot(wavelength,depth, '+')
+pylab.title(str(j+1)+' Binned Spectra Wavelength vs. Transit Depth')
+pylab.ylabel('Transit Depth (%out of transit flux)')
+pylab.xlabel('Wavelength')
+pylab.xlim([0.25,2.75])
+pylab.show()
