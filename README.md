@@ -12,5 +12,5 @@ Investigate how the transit shape/depth changes as a function of wavelength. At 
 is the limb-darkening effect the strongest?
 
 
-Presentation
+Presentation used to be at (link does not work anymore):
 https://docs.google.com/a/spacegeneration.org/presentation/d/1ZAui1lmrSWQuvumcG8J3URGdvueabxowuMqT870PuHM/edit?usp=sharing
